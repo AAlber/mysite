@@ -1,0 +1,21 @@
+@use '../../../styles/base/colors';
+.contact{
+    width: 100%;
+	background: colors.$color-gradient;
+    border-radius: 40px 40px 0 0;
+    color:white;
+    padding:5rem;
+    bottom:-2rem;
+    margin-top:10rem;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    &__links{   
+        margin-top: 1rem; 
+        display: flex;
+        gap:2rem;
+    }
+}

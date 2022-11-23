@@ -1,0 +1,66 @@
+@use '../../../styles/base/colors';
+.projectTabs{
+    min-width: 40rem;
+    max-width: 40rem;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    a{
+        color:black;
+    }
+    cursor: pointer;
+}
+@mixin selected ($translate ){
+    transition: all 0.2s;
+    transform: translateX($translate) !important;
+}
+
+.selected{
+    &--0{
+        @include selected(0);
+    }
+    &--1{
+        @include selected(98.5%);
+    }
+    &--2{
+        @include selected(190%);
+        width:120px !important;
+    }
+}
+.selectedTab{
+    color:white !important;
+}
+@mixin distanceFromStart ($distanceFromStart){
+    left: $distanceFromStart !important;
+}
+.glider {
+	position: absolute;
+    left: 0rem;
+    // left: 0rem;
+
+    
+	display: flex;
+	height: 45px;
+	width: 130px !important;
+	background: colors.$color-gradient;
+	z-index: -11;
+	border-radius: 150px; // just a high number to create pill effect
+	transition: 0.25s ease-out;
+    &--1{
+        @include distanceFromStart(13.5rem)
+    }
+    &--2{
+        @include distanceFromStart(7.85rem)
+    }
+    &--3{
+        @include distanceFromStart(1.8rem)
+    }
+}
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}
