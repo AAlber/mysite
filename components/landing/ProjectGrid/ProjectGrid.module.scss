@@ -1,6 +1,12 @@
 .projectGrid {
   margin-top: 5rem;
   display: flex;
+  flex-wrap:wrap;
+  &__links{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:1rem;
+  }
   &__left {
     padding: 1rem 3rem;
     max-width: 50rem;
@@ -14,12 +20,19 @@
   }
   &__flexImage {
     display: flex;
-    gap:1rem;
+    gap:2rem;
   }
   &__bottomRight{
     margin-top:1rem;
+    width: 43rem;
+    img{
+      min-width: 8rem;
+    }
     a{
-      padding: 2rem;
+      margin: 0 2rem 0 0;
+    }
+    p{
+      padding:1rem 2rem;
     }
   }
   &__topRight {

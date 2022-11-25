@@ -1,0 +1,38 @@
+@use '../../../styles/base/colors';
+@use '../../../styles/abstracts/mixins';
+
+.skills {
+    width: 80%;
+
+    margin: 2rem 10%;
+    h2{
+        margin:5rem 0 2rem 0;
+    }
+    &__accordion{
+        margin-top: 1rem;
+    
+        hr{
+            color: colors.$color-light-purple;
+            background-color:colors.$color-light-purple;
+            clear: both;
+            border: 0;
+            display: block;
+            height: 3px;
+            margin-bottom: 2rem;
+        }
+    
+    }
+}
+
+@include mixins.mobile {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+        padding: 5rem 0;
+        &__accordion{
+            width: 100%;
+        }
+    }  
+}
+
+

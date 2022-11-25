@@ -1,23 +1,22 @@
+import { init, setOptOut, track } from '@amplitude/analytics-browser';
+import { ServerZone } from '@amplitude/analytics-types';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { TextPlugin } from 'gsap/dist/TextPlugin';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/pages/Home.module.scss';
-import Navbar from '../components/Layout/Navbar';
 import Link from 'next/link';
-import Footer from '../components/Layout/Footer';
-import { useIntl } from 'react-intl';
-import { gsap } from 'gsap';
-import { TextPlugin } from 'gsap/dist/TextPlugin';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import useWindowDimensions from '../hooks/useWindowDimensions';
-import Script from 'next/script';
-import SpecialSection from '../components/Layout/special-section/SpecialSection';
-import Faq from '../components/landing/Faq';
-import BurgerMenu from '../components/Layout/BurgerMenu';
-import { ServerZone } from '@amplitude/analytics-types';
-import { init, setOptOut, track } from '@amplitude/analytics-browser';
 import { useEffect } from 'react';
 import CookieConsent from 'react-cookie-consent';
+import { useIntl } from 'react-intl';
+import Skills from '../components/landing/Skills';
+import BurgerMenu from '../components/Layout/BurgerMenu';
+import Footer from '../components/Layout/Footer';
+import Navbar from '../components/Layout/Navbar';
+import SpecialSection from '../components/Layout/special-section/SpecialSection';
+import useWindowDimensions from '../hooks/useWindowDimensions';
+import styles from '../styles/pages/Home.module.scss';
 
 const Interviews: NextPage = () => {
   const { width } = useWindowDimensions();
@@ -134,7 +133,7 @@ const Interviews: NextPage = () => {
       <div id="trust-factors"></div>
       <div id="faq"></div>
       {/*Empty div to prevent scrolling down to much and over the FAQ title section*/}
-      <Faq />
+      <Skills />
       <div id="contact">
         <Footer />
       </div>

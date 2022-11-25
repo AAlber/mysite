@@ -23,26 +23,30 @@ const ProjectGrid = (props: ProjectGridProps) => {
         <p>{props.description}</p>
         <br />
         <div className={styles['projectGrid__flexImage']}>
-        <Image src={'/techstack.svg'} width={50} height={50}/>
-        <span>{props.tech.toString()}</span>
+          <Image src={'/techstack.svg'} width={50} height={50} />
+          <span>{props.tech.toString().replaceAll(',', ', ')}</span>
         </div>
-        
-        
       </div>
       <div>
         <div className={styles['projectGrid__topRight']}>
           <ProjectTabs titles={props.headers} setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
           <p>{props.contents[selectedTab]}</p>
         </div>
-        <div className={styles['projectGrid__flexImage']+ ' '+ styles['projectGrid__bottomRight']}>
+        <div className={styles['projectGrid__flexImage'] + ' ' + styles['projectGrid__bottomRight']}>
 
-        <Image src={'/link.svg'} width={50} height={50}/>
-
-        {props.links.map(({ linkHref, linkTitle }) => (
-          <Link href={linkHref}>
-            <a className="gradient-text">{linkTitle}</a>
-          </Link>
-        ))}
+        {props.links.length>0 ?
+         <>
+          <Image src={'/link.svg'} width={50} height={50} />
+          <div className={styles['projectGrid__links']}>
+            
+             {props.links.map(({ linkHref, linkTitle }) => (
+              <Link href={linkHref}>
+                <a className="gradient-text">{linkTitle}</a>
+              </Link>
+            ))}
+          </div>
+          </>
+        : <p>Contact me for access to our GitHub</p>}
         </div>
       </div>
     </div>

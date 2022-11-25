@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import styles from './FaqAccordion.module.scss';
+import styles from './SkillsAccordion.module.scss';
 
-export type FaqAccordionProps = {
+export type SkillsAccordionProps = {
   title: string;
   content: string;
 };
 
-const FaqAccordion = (props: FaqAccordionProps) => {
+const SkillsAccordion = (props: SkillsAccordionProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [imageStyle, setImageStyle] = useState<string>('');
   useEffect(() => {
@@ -27,4 +27,4 @@ const FaqAccordion = (props: FaqAccordionProps) => {
   );
 };
 
-export default FaqAccordion;
+export default SkillsAccordion;

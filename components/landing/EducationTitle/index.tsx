@@ -1,9 +1,6 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from './EducationTitle.module.scss';
-import FaqAccordion from '../FaqAccordion/index';
 
-import { useIntl } from 'react-intl';
 
 type EducationTitleProps = {
   setEducationTitle: (value: string) => void;

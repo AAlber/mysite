@@ -1,32 +1,25 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
 import styles from './Navbar.module.scss';
 import Tab from './Tab';
-import { FormattedMessage, useIntl } from 'react-intl';
-import { useRouter } from 'next/router';
-import Sidebar from './BurgerMenu';
 export type NavbarProps = {
   screenWidth?: number;
 };
 
 const Navbar = (props: NavbarProps) => {
   const intl = useIntl();
-  const why = intl.formatMessage({ id: 'component.navbar.why' });
-  const joinFoodle = intl.formatMessage({ id: 'component.navbar.join' });
-  const contact = intl.formatMessage({ id: 'component.navbar.contact' });
-  const what = intl.formatMessage({ id: 'component.navbar.what' });
+  const myJourney = intl.formatMessage({ id: 'component.navbar.journey' });
+  const myEducation = intl.formatMessage({ id: 'component.navbar.education' });
+  const myProjects = intl.formatMessage({ id: 'component.navbar.projects' });
 
   const router = useRouter()
   return (
     <nav className={styles['navbar']}>
         <div className={styles['navbar__menu']}>
         <Tab href="/" iconSrc={'/world-icon.svg'} title="EN" burger={false} />
-        <Tab href="#join-foodle" title={joinFoodle} />
-        <Tab href="#special-section" title={what} />
-        <Tab href="#trust-factors" title={why} />
-        {/* <Tab href="#contact" title={contact} /> */}
-        <Tab href="#faq" title="F.A.Q." />
+        <Tab href="#journey" title={myJourney} />
+        <Tab href="#education" title={myEducation} />
+        <Tab href="#projects" title={myProjects} />
       </div>
     </nav>
   );
