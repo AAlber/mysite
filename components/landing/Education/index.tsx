@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useWindowDimensions from '../../../hooks/useWindowDimensions';
 import styles from './Education.module.scss';
 
@@ -24,7 +24,15 @@ const Education = () => {
     'Harriton HS',
   ];
   const eduDescriptions = [eduDescription1, eduDescription2, eduDescription3];
-  const [educationTitle, setEducationTitle] = useState(width!>1000 ? titles[0]: shortTitles[0]);
+  const [wasFirstRender,setWasFirstRender]=useState(true);
+
+  useEffect(()=>{
+    if (width && wasFirstRender===true){
+      setEducationTitle(width!>767 ? titles[0]: shortTitles[0]);
+      setWasFirstRender(false)
+    }
+  })
+  const [educationTitle, setEducationTitle] = useState(titles[0]);
   const [educationContent, setEducationContent] = useState(eduDescriptions[0]);
 
   return (
@@ -32,7 +40,7 @@ const Education = () => {
       <h2 className="header-secondary gradient-text mt-two">{header}</h2>
       <div className={styles['education__flex']}>
         <div className={styles['education__titles']}>
-          {(width!>1000 ? titles: shortTitles ).map((title, index) => (
+          {(width!>767 ? titles: shortTitles ).map((title, index) => (
             <EducationTitle
               setEducationContent={setEducationContent}
               setEducationTitle={setEducationTitle}
