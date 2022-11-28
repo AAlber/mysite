@@ -5,7 +5,7 @@ import styles from './ProjectHeader.module.scss';
 
 const ProjectHeader = () => {
     const header= useIntl().formatMessage({id:"home.projects.header"});
-    const subheader= useIntl().formatMessage({id:"home.projects.header"});
+    const subheader= useIntl().formatMessage({id:"home.projects.subheader"});
   return (
     <div className={styles['projectHeader']}>
        <h2 className='header-primary gradient-text'>{header}</h2>

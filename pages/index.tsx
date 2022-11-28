@@ -47,14 +47,13 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Foodle</title>
+        <title>Alex Alber</title>
         <meta
           name="description"
-          content="Foodle is a licensed kitchen rental service where food businesses (like restaurants, bakeries, ice cream shops, etc.) rent out their kitchens to cooks, bakers or other food producers.
-          Foodle ist eine .
+          content="Hi! I'm an experienced frontend developer and this site explains my journey and projects.
           "
         />
-        <link rel="icon" href="/foodle_logo.svg" />
+        <link rel="icon" href="/dev.svg" />
         <link rel="alternate" href="http://localhost:3000" hrefLang="de" />
         <link rel="alternate" href="http://localhost:3000/en" hrefLang="en" />
         {/* Web Analytics */}
@@ -62,7 +61,15 @@ const Home: NextPage = () => {
       <Navbar screenWidth={width} />
       <CookieConsent
         hideOnAccept={true}
+        // style={{backgroundColor: 'black'}}
+        // disableStyles
         enableDeclineButton
+        containerClasses={styles['cookie']}
+        // location={bottom}
+
+        contentClasses={styles['cookie__content']}
+        declineButtonClasses={styles['cookie__decline']}
+        buttonClasses={styles['cookie__accept']}
         onDecline={() => setOptOut(true)}
         onAccept={(acceptedByScrolling) => {
           if (acceptedByScrolling) {
@@ -74,12 +81,6 @@ const Home: NextPage = () => {
       >
         {cookieMessage}
       </CookieConsent>
-      <header className={styles['mainAnimation__wrapper']}>
-        <div className={styles["mainAnimation"]}>
-          <div className={styles["mainAnimation__topPlane"]}></div>
-          <div className={styles["MainAnimation__bottomPlane"]}></div>
-        </div>
-      </header>
 
       {/* <=== Section 1 ===> */}
       <div className={styles['hero']}>

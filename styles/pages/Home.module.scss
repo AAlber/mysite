@@ -25,6 +25,26 @@ $nanoVelocity: 2s;
   flex-wrap: wrap;
 }
 
+.cookie{
+  background-color: black !important; 
+
+  border-radius: 15px 15px 0 0 ;
+  &__content{
+    font-size: 15px;
+  }
+  &__decline{
+    color:black !important;
+    background-color: rgb(174, 173, 173) !important;
+    border-radius: 10px !important;
+  }
+  &__accept{
+    color: white !important;
+
+    border-radius: 10px !important;
+    background: linear-gradient(90deg, #00C6FF 0%, #0072FF 100%) !important;
+  }
+}
+
 
 .mainAnimation{
   width: 100%;

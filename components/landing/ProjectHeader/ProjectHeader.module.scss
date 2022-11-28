@@ -1,3 +1,4 @@
+@use '../../../styles/abstracts/mixins';
 .projectHeader{
     margin:15rem 0 8rem;
     display:flex;
@@ -23,4 +24,31 @@
     &--2{
       right: 0rem !important;
     }
+  }
+
+  @include mixins.mobile{
+    .projectHeader{
+        text-align: center;
+        h2{
+            padding-bottom: 0.5rem;
+        }
+        p{
+            margin-top: 1rem;
+            max-width: 25rem;
+        }
+    }
+    .sidebubble{
+
+        
+        width: 2rem !important;
+        &--1{  
+            left: -7rem !important;
+            transform: rotate(180deg) scale(0.5);
+        }
+        &--2{
+            right: -7rem !important;
+            transform: scale(0.5) translateY(-5rem);
+            // display: none !important;
+        }
+      }
   }
