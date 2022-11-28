@@ -27,7 +27,7 @@ const ProjectGrid = (props: ProjectGridProps) => {
           <span>{props.tech.toString().replaceAll(',', ', ')}</span>
         </div>
       </div>
-      <div>
+      <div className={styles['projectGrid__right']}>
         <div className={styles['projectGrid__topRight']}>
           <ProjectTabs titles={props.headers} setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
           <p>{props.contents[selectedTab]}</p>
@@ -36,7 +36,7 @@ const ProjectGrid = (props: ProjectGridProps) => {
 
         {props.links.length>0 ?
          <>
-          <Image src={'/link.svg'} width={50} height={50} />
+          <Image src={'/link.svg'} width={45} height={45} />
           <div className={styles['projectGrid__links']}>
             
              {props.links.map(({ linkHref, linkTitle }) => (

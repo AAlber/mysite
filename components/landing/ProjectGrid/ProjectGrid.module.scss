@@ -1,38 +1,39 @@
+@use '../../../styles/abstracts/mixins';
+
 .projectGrid {
   margin-top: 5rem;
   display: flex;
-  flex-wrap:wrap;
   &__links{
     display: flex;
     flex-wrap: wrap;
     margin-top:1rem;
+    max-width: 30rem;
   }
   &__left {
     padding: 1rem 3rem;
     max-width: 50rem;
     span {
-      padding: 1rem 0;
+      padding: 0.5rem 0;
+      max-width: 30rem;
     }
     img{
-      margin-top: 1rem;
-      width: 80px !important;
+      min-width:6rem !important;
     }
   }
   &__flexImage {
     display: flex;
+    align-items: center;
     gap:2rem;
+    height:7rem;
   }
   &__bottomRight{
-    margin-top:1rem;
-    width: 43rem;
+    max-width: 43rem;
+    margin: 2rem 0 0 0;
     img{
-      min-width: 8rem;
+      min-width:5.5rem !important;
     }
     a{
-      margin: 0 2rem 0 0;
-    }
-    p{
-      padding:1rem 2rem;
+      padding-right: 2rem;
     }
   }
   &__topRight {
@@ -41,8 +42,83 @@
     width: 43rem;
 
     padding: 1rem 0;
+    margin: 1rem 0;
     p {
       padding: 2rem;
     }
   }
+}
+@include mixins.tablet{
+  .projectGrid{
+    flex-direction: column;
+    // &__bottomRight{
+    //   margin-top:1rem !important;
+    //   width: 20rem !important;
+    //   img{
+    //     margin:0rem 1.9rem 0 0 !important;
+    //     min-width: 5rem !important;
+    //   }
+    //   a{
+    //     padding-right: 2rem;
+    //   }
+    //   p{
+    //     padding:1rem 2rem;
+    //   }
+    // }
+  }
+  
+}
+@include mixins.mobile{
+  .projectGrid{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__links{
+      max-width: 24rem;
+    }
+
+    &__left{
+      span{
+        max-width: 25rem;
+        font-size: 16px;
+      }
+    }
+    &__bottomRight{
+      align-self: flex-start;
+      margin-left: 1.5rem;
+    }
+
+    &__topRight{
+      width: 34rem;
+    }
+    // &__bottomRight{
+    //   width: 35rem;
+    // }
+  }
+
+  //   &__links{
+  //     max-width: 10rem;
+  //   }
+  //   &__bottomRight{
+  //     margin-top:1rem;
+  //     width: 43rem;
+  //     img{
+  //       margin:0rem 1.9rem 0 0 !important;
+  //       // min-width: 5rem !important;
+  //     }
+  //     a{
+  //       // padding-right: 2rem;
+  //     }
+  //     p{
+  //       padding:1rem 2rem;
+  //     }
+  //   }
+  // }
 }

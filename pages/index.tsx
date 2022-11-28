@@ -12,7 +12,6 @@ import Homes from '../components/landing/Homes';
 import ProjectGrid from '../components/landing/ProjectGrid';
 import ProjectHeader from '../components/landing/ProjectHeader';
 import Skills from '../components/landing/Skills';
-import BurgerMenu from '../components/Layout/BurgerMenu';
 import Navbar from '../components/Layout/Navbar';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 import styles from '../styles/pages/Home.module.scss';
@@ -61,9 +60,6 @@ const Home: NextPage = () => {
         {/* Web Analytics */}
       </Head>
       <Navbar screenWidth={width} />
-      <div className={styles['sidebar']}>
-        <BurgerMenu />
-      </div>
       <CookieConsent
         hideOnAccept={true}
         enableDeclineButton
@@ -125,7 +121,7 @@ const Home: NextPage = () => {
       <ProjectGrid
         title={'Hashtune'}
         description={hashtuneGeneralDescription}
-        links={[]}
+        links={[{linkHref: "https://github.com/hashtune/Hashtune-Marketplace-Client", linkTitle: "GitHub"}]}
         tech={["Next.Js", "SCSS", "Prisma", "NexusJS", "GraphQL Codegen", "Apollo GQL"]} headers={["Frontend"]} contents={[hashtuneFrontend]}      />
         <ProjectGrid
         title={'Trade Route'}
