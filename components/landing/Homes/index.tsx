@@ -40,7 +40,7 @@ const Homes = () => {
       {locations.map((location: string, index) => {
         let isEven = index%2 === 0;
         return (
-          <Marquee  speed={generateRandomNumber(30, 80)} direction={isEven? "left": "right"} className={styles['homes__location']}>
+          <Marquee key={index}  speed={generateRandomNumber(30, 80)} direction={isEven? "left": "right"} className={styles['homes__location']}>
             <h4>{location} {"("}{endDates[index]} - {endDates[index+1]}{")"}</h4>
           </Marquee>
         );

@@ -21,9 +21,9 @@ const contactHeader = intl.formatMessage({ id: "component.contact.header"});
 
         <a href={"tel:${+49 176 63741892}"}>+49 176 63741892</a>
         <div className={styles['contact__links']}>
-        {props.links.map(({linkSrc, imgSrc})=>{
+        {props.links.map(({linkSrc, imgSrc}, index)=>{
             return (
-                <Link href={linkSrc} ><a>
+                <Link href={linkSrc} key={index} ><a>
                 <Image src={imgSrc} width={50} height={50}/>
                 </a>
                 </Link>

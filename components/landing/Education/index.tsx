@@ -39,6 +39,7 @@ const Education = () => {
               content={eduDescriptions[index]}
               title={title}
               isClicked={educationTitle === title}
+              key={index}
             />
           ))}
         </div>

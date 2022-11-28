@@ -39,8 +39,8 @@ const ProjectGrid = (props: ProjectGridProps) => {
           <Image src={'/link.svg'} width={45} height={45} />
           <div className={styles['projectGrid__links']}>
             
-             {props.links.map(({ linkHref, linkTitle }) => (
-              <Link href={linkHref}>
+             {props.links.map(({ linkHref, linkTitle }, index) => (
+              <Link href={linkHref} key={index}>
                 <a className="gradient-text">{linkTitle}</a>
               </Link>
             ))}

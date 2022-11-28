@@ -29,6 +29,7 @@ const ProjectTabs = (props: ProjectTabsProps) => {
               updateGliderStyle(index);
               props.setSelectedTab(index);
             }}
+            key={index}
             className={index === props.selectedTab ? styles['selectedTab'] + ' header-tertiary' : 'header-tertiary'}
           >
             {title}
