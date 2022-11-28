@@ -38,16 +38,14 @@
         }
     }
     .sidebubble{
-
-        
         width: 2rem !important;
         &--1{  
-            left: -7rem !important;
-            transform: rotate(180deg) scale(0.5);
+            left: -8rem !important;
+            transform: rotate(180deg) scale(0.4) translateY(-20rem);
         }
         &--2{
-            right: -7rem !important;
-            transform: scale(0.5) translateY(-5rem);
+            right: -8rem !important;
+            transform: scale(0.4) translateY(-15rem);
             // display: none !important;
         }
       }
