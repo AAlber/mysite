@@ -118,12 +118,12 @@ const Home: NextPage = () => {
         title={'Foodle'}
         description={foodleGeneralDescription}
         links={[{linkHref:"https://beta.foodle-kitchens.com", linkTitle: "Main Application" }, {linkHref:"https://foodle-kitchens.com", linkTitle: "Landing Page" }, {linkHref:"https://foodle-kitchens.com", linkTitle: "Landing Page GitHub" }]}
-        tech={["Next.Js", "SCSS", "Prisma", "NexusJS", "GraphQL Codegen", "Apollo GQL", "AWS", "Stripe"]} headers={["Fullstack", "Product", "Design"]} contents={[foodleFullstack, foodleProduct, foodleDesign]}      />
+        tech={["TypeScript", "Next.Js", "SCSS", "Prisma", "NexusJS", "GraphQL Codegen", "Apollo GQL", "AWS", "Stripe"]} headers={["Fullstack", "Product", "Design"]} contents={[foodleFullstack, foodleProduct, foodleDesign]}      />
       <ProjectGrid
         title={'Hashtune'}
         description={hashtuneGeneralDescription}
         links={[{linkHref: "https://github.com/hashtune/Hashtune-Marketplace-Client", linkTitle: "GitHub"}]}
-        tech={["Next.Js", "SCSS", "Prisma", "NexusJS", "GraphQL Codegen", "Apollo GQL"]} headers={["Frontend"]} contents={[hashtuneFrontend]}      />
+        tech={["TypeScript", "Next.Js", "SCSS", "Prisma", "NexusJS", "GraphQL Codegen", "Apollo GQL"]} headers={["Frontend"]} contents={[hashtuneFrontend]}      />
         <ProjectGrid
         title={'Trade Route'}
         description={tradeRouteGeneralDescription}
